@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 50vw;
+        height: 50vw;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      srcset="
+        https://picsum.photos/id/164/150   150w,
+        https://picsum.photos/id/164/300   300w,
+        https://picsum.photos/id/164/600   600w,
+        https://picsum.photos/id/164/900   900w,
+        https://picsum.photos/id/164/1200 1200w
+      "
+      sizes="
+      (max-width: 300px) 50vw,
+      (max-width: 600px) 50vw,
+      (max-width: 900px) 50vw,
+      (max-width: 1200px) 50vw,
+      50vw
+      "
+      alt=""
+    />
+  </body>
+</html>

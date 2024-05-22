@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-item {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.form-input {
+  display: flex;
+  column-gap: 1em;
+}
+.form-input input {
+  flex-grow: 1;
+  padding: 0 0.3em;
+  font-size: inherit;
+}
+.form-msg {
+  color: #f40;
+  font-size: 0.8em;
+  margin-left: 63px;
+  display: none;
+}

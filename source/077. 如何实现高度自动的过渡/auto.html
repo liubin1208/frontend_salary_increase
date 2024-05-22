@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto</title>
+    <style>
+      .btn {
+        position: relative;
+        border: none;
+        outline: none;
+        background: #409eff;
+        color: #fff;
+        display: inline-block;
+        line-height: 1;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.1s;
+        font-weight: 500;
+        user-select: none;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 4px;
+      }
+      .btn:hover {
+        background: #66b1ff;
+      }
+      .btn:active {
+        background: #3a8ee6;
+      }
+      .btn:disabled {
+        background: #66b1ff80;
+        cursor: not-allowed;
+      }
+      .detail {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        overflow: hidden;
+        padding-top: 0.2em;
+      }
+      .content {
+        width: 200px;
+        border-radius: 5px;
+        background: #007bff;
+        color: #fff;
+        line-height: 1.5;
+      }
+      .inner {
+        padding: 20px;
+      }
+
+      .content {
+        height: 0;
+        transition: 0.5s;
+      }
+      .btn:hover .content {
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btn">
+      hover me
+      <div class="detail">
+        <div class="content">
+          <div class="inner">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+            facilis eligendi, explicabo exercitationem ex quos eveniet delectus
+            quas rem labore debitis accusamus deleniti similique ducimus aperiam
+            nisi dolore voluptatum maiores.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

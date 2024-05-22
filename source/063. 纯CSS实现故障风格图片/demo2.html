@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .earth {
+        width: 800px;
+        height: 600px;
+        background: url(./earth.png) no-repeat center/cover;
+        position: relative;
+      }
+      .mix {
+        position: absolute;
+        left: 50%;
+        top: 233px;
+        margin-left: -100px;
+        width: 150px;
+        height: 150px;
+        background: url(./ikun.gif) center/cover;
+        background-size: cover;
+        mix-blend-mode: multiply;
+        filter: contrast(3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="earth">
+      <div class="mix"></div>
+    </div>
+  </body>
+</html>

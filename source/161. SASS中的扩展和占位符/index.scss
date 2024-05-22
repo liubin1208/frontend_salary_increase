@@ -1,0 +1,21 @@
+@mixin common {
+  margin: 1em 0;
+  font-size: 0.8em;
+  opacity: 0.8;
+  text-decoration: underline;
+}
+.tip {
+  @include common;
+}
+.tip-warning {
+  @include common;
+  color: orange;
+}
+.tip-error {
+  @include common;
+  color: red;
+}
+.tip-success {
+  @include common;
+  color: green;
+}

@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  cursor: none;
+}
+.pointer {
+  width: 32px;
+  height: 32px;
+  position: fixed;
+  margin-left: -16px;
+}

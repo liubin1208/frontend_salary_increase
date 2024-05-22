@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #000;
+      }
+      .container {
+        margin-top: 50px;
+        text-align: center;
+        background-color: #000;
+        filter: contrast(30);
+      }
+      .text {
+        font-size: 100px;
+        color: #fff;
+        animation: showup 3s forwards;
+      }
+      @keyframes showup {
+        from {
+          letter-spacing: -50px;
+          filter: blur(10px);
+        }
+        to {
+          letter-spacing: 10px;
+          filter: blur(2px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="text">Web Developer</span>
+    </div>
+  </body>
+</html>

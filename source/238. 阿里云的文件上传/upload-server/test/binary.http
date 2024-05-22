@@ -1,0 +1,6 @@
+POST /upload/binary HTTP/1.1
+Host: localhost:9527
+Content-Type: application/octet-stream
+x-ext: .jpg
+
+< ./files/f1.jpg

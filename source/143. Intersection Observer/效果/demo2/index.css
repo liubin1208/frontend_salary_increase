@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+.grid {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.grid img {
+  animation: scale 1s;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.spin {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 7px dashed #4b9cdb;
+  border-radius: 100%;
+  animation: loading 1.5s 0.3s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+  margin-bottom: 100px;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

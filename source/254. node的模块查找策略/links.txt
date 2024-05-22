@@ -1,0 +1,3 @@
+https://www.typescriptlang.org/docs/handbook/2/modules.html#typescripts-module-resolution-options
+
+https://nodejs.org/docs/latest/api/modules.html

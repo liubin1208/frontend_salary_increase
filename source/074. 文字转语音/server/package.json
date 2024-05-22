@@ -1,0 +1,23 @@
+{
+  "name": "tts-ws",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tts-ws-node.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "author": "iflytek",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "crypto-js": "^3.1.9-1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "log4node": "^0.1.6",
+    "ws": "^7.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        border: none;
+        outline: none;
+        background: #409eff;
+        color: #fff;
+        display: inline-block;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.1s;
+        font-weight: 500;
+        user-select: none;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 4px;
+      }
+      .btn:hover {
+        background: #66b1ff;
+      }
+      .btn:active {
+        background: #3a8ee6;
+      }
+      .btn:disabled {
+        background: #66b1ff80;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">插入100000个元素</button>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 20px;
+      }
+      .list-item {
+        float: left;
+        width: 30px;
+        height: 20px;
+        background: #008c8c;
+        color: #fff;
+        list-style: none;
+        text-align: center;
+        line-height: 20px;
+        border: 2px solid #ccc;
+        box-sizing: content-box;
+      }
+
+      button {
+        margin-top: 20px;
+        outline: none;
+        background: #409eff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 6px 15px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #66b1ff;
+      }
+      button:active {
+        background: #3a8ee6;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li class="list-item">1</li>
+      <li class="list-item">2</li>
+      <li class="list-item">3</li>
+      <li class="list-item">4</li>
+    </ul>
+    <button>复制一份</button>
+    <script>
+      const list = document.getElementsByClassName('list')[0];
+      const listItems = document.querySelectorAll('.list-item');
+      const btn = document.getElementsByTagName('button')[0];
+      btn.onclick = function () {
+        for (let i = 0; i < listItems.length; i++) {
+          const cloned = listItems[i].cloneNode(true);
+          list.appendChild(cloned);
+        }
+      };
+    </script>
+  </body>
+</html>

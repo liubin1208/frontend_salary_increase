@@ -1,0 +1,6 @@
+@use './common.scss' as a;
+@use './var.scss' as b;
+
+.foo {
+  color: b.$_n;
+}

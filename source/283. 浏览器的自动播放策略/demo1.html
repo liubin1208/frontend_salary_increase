@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>互动后播放</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="vdo-container">
+      <video src="./test.mp4"></video>
+      <div class="modal">
+        <button class="btn">开始播放</button>
+      </div>
+    </div>
+
+    <script>
+      const vdo = document.querySelector('video');
+      const modal = document.querySelector('.modal');
+      const btn = document.querySelector('.btn');
+      async function play() {
+        try {
+          await vdo.play();
+          modal.style.display = 'none';
+          btn.removeEventListener('click', play);
+        } catch (err) {
+          modal.style.display = 'flex';
+          btn.addEventListener('click', play);
+        }
+      }
+      play();
+    </script>
+  </body>
+</html>

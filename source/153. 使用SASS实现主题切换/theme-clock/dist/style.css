@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+
+html {
+  transition: 0.5s ease-in;
+}
+html[data-theme='dark'] {
+  --primary-color: #fff;
+  --secondary-color: #333;
+  background-color: #111;
+  color: var(--primary-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Heebo', sans-serif;
+}
+
+.toggle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 0.5em 0.5em;
+  position: absolute;
+  top: 5px;
+  cursor: pointer;
+}
+.toggle:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+.clock-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.clock-container .clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.clock-container .clock .needle {
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65px;
+  width: 3px;
+  transform-origin: bottom center;
+}
+.clock-container .clock .needle.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+.clock-container .clock .needle.minute {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+}
+.clock-container .clock .needle.second {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+  background-color: #e74c3c;
+  width: 1.5px;
+}
+.clock-container .clock .center-point {
+  background-color: var(--primary-color);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2.5px solid #e74c3c;
+  border-radius: 50%;
+}
+.clock-container .time {
+  font-size: 2.5rem;
+}
+.clock-container .date {
+  color: #aaa;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.clock-container .date .circle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1em;
+  transition: all 0.5s ease-in;
+  font-size: 0.8rem;
+  margin-left: 0.5em;
+}

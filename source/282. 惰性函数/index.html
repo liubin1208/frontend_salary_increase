@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        border: none;
+        outline: none;
+        background: #409eff;
+        color: #fff;
+        display: inline-block;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.1s;
+        font-weight: 500;
+        user-select: none;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 4px;
+      }
+      .btn:hover {
+        background: #66b1ff;
+      }
+      .btn:active {
+        background: #3a8ee6;
+      }
+      .btn:disabled {
+        background: #66b1ff80;
+        cursor: not-allowed;
+      }
+      .btn {
+        position: relative;
+      }
+      .btn::after {
+        position: absolute;
+        color: #62c354;
+        font-size: 12px;
+        text-align: center;
+        width: 100%;
+        left: 0;
+        top: 0;
+      }
+      .btn.success::after {
+        content: '复制成功';
+        animation: moveUp 0.3s ease-in-out;
+      }
+      @keyframes moveUp {
+        to {
+          transform: translateY(-300%);
+          opacity: 0;
+        }
+      }
+      input {
+        display: block;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1></h1>
+    <button class="btn">复制文本</button>
+    <input type="text" placeholder="测试复制结果" />
+    <script src="./action.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

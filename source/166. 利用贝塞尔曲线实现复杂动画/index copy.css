@@ -1,0 +1,30 @@
+/* hounidi Api */
+@property --x {
+  syntax: '<length>';
+  initial-value: 0px;
+  inherits: false;
+}
+@property --y {
+  syntax: '<length>';
+  initial-value: 0px;
+  inherits: false;
+}
+
+.ball {
+  transform: translate(var(--x), var(--y));
+  animation: x 2s, y 1s;
+  animation-timing-function: cubic-bezier(0.5, -800, 0.5, 800);
+  animation-iteration-count: infinite;
+}
+
+@keyframes x {
+  to {
+    --x: 1px;
+  }
+}
+
+@keyframes y {
+  to {
+    --y: 0.1px;
+  }
+}

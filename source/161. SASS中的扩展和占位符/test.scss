@@ -1,0 +1,21 @@
+%tip {
+  margin: 1em 0;
+  font-size: 0.8em;
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.tip-warning {
+  @extend %tip;
+  color: orange;
+}
+
+.tip-error {
+  @extend %tip;
+  color: red;
+}
+
+.tip-success {
+  @extend %tip;
+  color: green;
+}

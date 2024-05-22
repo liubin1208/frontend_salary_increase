@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.search-container {
+  width: 80%;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+}
+
+.search-container input {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  font-size: 2em;
+  padding: 0 20px;
+}
+.search-container .suggest {
+  position: absolute;
+  width: 100%;
+  max-height: 500px;
+  border: 2px solid #688fcd;
+  border-radius: 10px;
+  padding: 20px;
+  overflow: auto;
+  display: none;
+  font-size: 18px;
+}
+.search-container .suggest span {
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 40px;
+  line-height: 40px;
+}
+.search-container .suggest.active {
+  display: block;
+}

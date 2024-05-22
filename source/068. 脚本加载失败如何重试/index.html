@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const domains = ['asdfasdf343tas.com', 'asdfdfg33fggg.com', 'backup.com'];
+      const retry = {};
+      window.addEventListener(
+        'error',
+        (e) => {
+          if (e.target.tagName !== 'SCRIPT' || e instanceof ErrorEvent) return;
+          const url = new URL(e.target.src);
+          const name = url.pathname;
+          if (!(name in retry)) {
+            retry[name] = 0;
+          }
+          const index = retry[name];
+          if (index >= domains.length) return;
+          const newDomain = domains[index];
+          url.host = newDomain;
+          document.write(`\<script src="${url}">\<\/script>`);
+          retry[name]++;
+        },
+        true
+      );
+    </script>
+  </head>
+  <body>
+    <script src="http://static.com/js/1.js"></script>
+    <script src="http://abcdefgasdf.com/js/2.js"></script>
+    <script src="http://static.com/js/3.js"></script>
+  </body>
+</html>

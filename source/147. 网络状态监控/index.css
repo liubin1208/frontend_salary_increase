@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 100px;
+  background: #000;
+}
+
+.card {
+  background: #3372b1;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  line-height: 2;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+}
+
+.card p {
+  display: flex;
+}
+.card strong {
+  width: 100px;
+  text-align: right;
+  margin-right: 1em;
+}
+.card strong::after {
+  content: ':';
+}
+
+.card.off {
+  background: #a43226;
+}

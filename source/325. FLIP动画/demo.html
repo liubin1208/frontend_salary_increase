@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./font/iconfont.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <button>改变第一个元素的位置</button>
+    <ul class="list">
+      <li class="list-item" style="background: #e75723; border-color: #a12d02">
+        HTML + CSS
+      </li>
+      <li class="list-item">JavaScript</li>
+      <li class="list-item">网络</li>
+      <li class="list-item">工程化</li>
+      <li class="list-item">框架</li>
+      <li class="list-item">移动端</li>
+      <li class="list-item">NodeJS</li>
+    </ul>
+    <script>
+      const btn = document.querySelector('button');
+      const list = document.querySelector('.list');
+      const firstItem = document.querySelector('.list-item:first-child');
+      const lastItem = document.querySelector('.list-item:last-child');
+
+      function getLocation() {
+        const rect = firstItem.getBoundingClientRect();
+        return rect.top;
+      }
+
+      const start = getLocation();
+      console.log('First：', start);
+
+      btn.onclick = () => {
+        list.insertBefore(firstItem, null);
+        const end = getLocation();
+        console.log('Last：', end);
+        const dis = start - end;
+        firstItem.style.transform = `translateY(${dis}px)`;
+        console.log('Invert：', dis);
+        raf(() => {
+          firstItem.style.transition = 'transform 1s';
+          firstItem.style.removeProperty('transform');
+          console.log('play');
+        });
+      };
+
+      function raf(callback) {
+        requestAnimationFrame(() => {
+          requestAnimationFrame(callback);
+        });
+      }
+
+      function delay(duration = 1000) {
+        const start = Date.now();
+        while (Date.now() - start < duration) {}
+      }
+    </script>
+  </body>
+</html>

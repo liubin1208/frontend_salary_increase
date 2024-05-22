@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  color: #333;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.toc {
+  border-right: 1px solid #ccc;
+  box-shadow: 1px 0 #eee;
+  width: 250px;
+  padding: 20px;
+  line-height: 3;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.toc-list {
+  list-style: none;
+}
+.toc-list .toc-list {
+  margin-left: 20px;
+}
+
+.toc-list a.highlight {
+  color: #dc6a12;
+  font-weight: bold;
+}
+.content {
+  padding: 30px;
+  margin-left: 250px;
+}

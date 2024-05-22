@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.traffic-light {
+  width: 200px;
+  margin: 10px auto;
+  font-family: DS-Digital;
+}
+
+.light-container {
+  display: flex;
+  justify-content: space-between;
+}
+.light {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
+  background: #b2b2b2;
+}
+
+.traffic-light.red .light.red {
+  background: #fc5e56;
+}
+.traffic-light.yellow .light.yellow {
+  background: #febc2e;
+}
+.traffic-light.green .light.green {
+  background: #28c840;
+}
+.time {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 5em;
+}

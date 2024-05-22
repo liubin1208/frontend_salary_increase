@@ -1,0 +1,58 @@
+body {
+  min-height: 100vh;
+  background: #212534;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 33vh;
+  height: 50vh;
+  position: relative;
+  border-radius: 6px;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0px;
+  background: inherit;
+  border-radius: inherit;
+  z-index: -1;
+  filter: blur(20px);
+}
+.card::after {
+  /* content: ''; */
+  position: absolute;
+  inset: 8px;
+  background: #191c29;
+  border-radius: inherit;
+}
+
+@property --direc {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card {
+  --direc: 0deg;
+  color: red;
+  font-size: 2rem;
+  background-image: linear-gradient(
+    var(--direc),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    --direc: 360deg;
+  }
+}

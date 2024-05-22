@@ -1,0 +1,23 @@
+{
+  "id": "3555577",
+  "name": "常用图标",
+  "font_family": "iconfont",
+  "css_prefix_text": "i-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4880417",
+      "name": "拖动",
+      "font_class": "tuodong",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "5831331",
+      "name": "拖动",
+      "font_class": "tuodong1",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    }
+  ]
+}

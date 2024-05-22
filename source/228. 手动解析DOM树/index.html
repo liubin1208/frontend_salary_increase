@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function removeTag(fragment) {
+        return (
+          new DOMParser().parseFromString(fragment, 'text/html').body
+            .textContent || ''
+        );
+      }
+      const str = `<div class="container">
+      <h1>DOM Parser</h1>
+      <ul>
+        <li>Lorem.</li>
+        <li>Adipisci?</li>
+        <li>Sequi?</li>
+        <li>Non!</li>
+        <li>Mollitia.</li>
+        <li>Quaerat!</li>
+        <li>Atque.</li>
+        <li>Consequuntur.</li>
+        <li>Ea.</li>
+        <li>Placeat!</li>
+      </ul>
+    </div>`;
+      // const content = removeTag(str);
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(str, 'text/html');
+      console.log(doc.body.textContent);
+      // console.log(content);
+    </script>
+  </body>
+</html>

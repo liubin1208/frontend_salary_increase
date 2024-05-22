@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>打开文件夹</button>
+    <script>
+      const btn = document.querySelector('button');
+      btn.onclick = async function () {
+        try {
+          // 获取文件夹的句柄
+          const handler = await showDirectoryPicker();
+          const root = await processHandle(handler);
+          // 获取文件内容
+          const file = await root.children[1].getFile();
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            console.log(e.target.result);
+          };
+          reader.readAsText(file, 'utf-8');
+        } catch {
+          // 用户拒绝站点查看文件夹内容
+        }
+      };
+
+      async function processHandle(handle) {
+        if (handle.kind === 'file') {
+          return handle;
+        }
+        handle.children = [];
+        const iter = await handle.entries(); // 获取文件夹中的所有内容
+        // iter: 异步迭代器
+        for await (const info of iter) {
+          const subHandle = await processHandle(info[1]); // 递归处理文件夹中的内容
+          handle.children.push(subHandle);
+        }
+        return handle;
+      }
+    </script>
+  </body>
+</html>

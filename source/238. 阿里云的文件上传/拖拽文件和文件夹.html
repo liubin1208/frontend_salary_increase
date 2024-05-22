@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        border: 1px solid;
+        width: 100%;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <script>
+      const div = document.querySelector('.container');
+
+      div.ondragenter = (e) => {
+        e.preventDefault();
+      };
+      div.ondragover = (e) => {
+        e.preventDefault();
+      };
+      div.ondrop = (e) => {
+        e.preventDefault();
+        const items = e.dataTransfer.items;
+        for (const item of items) {
+          const entry = item.webkitGetAsEntry();
+          if (entry.isFile) {
+            // 处理文件：拿到File文件
+            entry.file((file) => {
+              // console.log(file);
+            });
+          } else {
+            // 处理文件夹：文件夹中的文件File对象
+            const reader = entry.createReader();
+            reader.readEntries((entries) => {
+              console.log(entries);
+            });
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

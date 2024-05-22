@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+
+.footer {
+  width: 100%;
+  height: 300px;
+  bottom: 0;
+  position: fixed;
+  background: #ed5565;
+}
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1em;
+  filter: url(#blob);
+  background: inherit;
+}
+.bubble {
+  position: absolute;
+  --x: 100px;
+  --s: 50px;
+  --d: 2s;
+  border-radius: 50%;
+  background: inherit;
+  width: var(--s);
+  height: var(--s);
+  left: var(--x);
+  top: 30px;
+  animation: bubbling var(--d) ease-in forwards;
+}
+
+@keyframes bubbling {
+  75% {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+    top: -200px;
+  }
+}

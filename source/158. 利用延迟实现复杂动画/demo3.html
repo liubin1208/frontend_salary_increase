@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>demo3</title>
+    <style>
+      body {
+        background: #000;
+      }
+      .container {
+        --delay: 0;
+        padding-top: 300px;
+      }
+      .mouse {
+        position: absolute;
+        top: 0;
+        width: 100px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 50px;
+        animation: mousechange 1s var(--delay) linear forwards paused;
+        box-shadow: inset 0 2px 0 #fff;
+        clip-path: inset(0% 0% 0% 0%);
+      }
+      @keyframes mousechange {
+        50% {
+          height: 4px;
+          box-shadow: inset 0 4px 0 #fff;
+          transform: translateY(40px);
+          clip-path: inset(0% 0% 0% 0%);
+        }
+        50.1% {
+          height: 4px;
+          box-shadow: inset 0 -4px 0 #fff;
+          transform: translateY(40px);
+          clip-path: inset(50% 0% 0% 0%);
+        }
+        to {
+          height: 80px;
+          box-shadow: inset 0 -50px 0 #fff;
+          transform: translateY(0);
+          clip-path: inset(50% 0% 0% 0%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mouse"></div>
+      <input type="range" min="0" max="1" step="0.01" />
+    </div>
+    <script>
+      const inp = document.querySelector('input');
+      const container = document.querySelector('.container');
+      function cal() {
+        container.style.setProperty('--delay', `-${inp.value}s`);
+      }
+      inp.oninput = cal;
+      cal();
+    </script>
+  </body>
+</html>

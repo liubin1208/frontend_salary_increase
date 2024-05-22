@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #000;
+}
+
+.container {
+  display: grid;
+  width: 90%;
+  margin: 80px auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  display: block;
+}
+.container {
+  position: relative;
+}
+
+.pointer {
+  position: absolute;
+  --l: 30px; /* 长度 */
+  --g: 15px; /* 间隔 */
+  --t: 3px; /* 粗细 */
+  --s: 246px; /* 框住的元素大小 */
+  --x: 0px;
+  --y: 0px;
+  width: calc(var(--s) + var(--g) * 2);
+  height: calc(var(--s) + var(--g) * 2);
+  border: var(--t) solid #fff;
+  left: calc(var(--x) - var(--g));
+  top: calc(var(--y) - var(--g));
+  transition: 0.5s;
+  --mask: conic-gradient(
+    at var(--l) var(--l), 
+    transparent 75%, 
+    red 75%
+  ) 0 0 
+  / 
+  calc(100% - var(--l)) calc(100% - var(--l));
+  mask: var(--mask);
+  -webkit-mask: var(--mask);
+}

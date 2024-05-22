@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        all: unset;
+        background: #589ff8;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #87bbf9;
+      }
+      button:active {
+        background: #467ec6;
+      }
+      .default,
+      .default:hover,
+      .default:active {
+        all: revert;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <button>提交</button>
+      <button>添加</button>
+      <button>修改</button>
+    </p>
+    <p>
+      <button class="default">默认样式的按钮</button>
+    </p>
+  </body>
+</html>

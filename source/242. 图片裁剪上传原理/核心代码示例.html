@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input,
+      button {
+        display: block;
+        margin: 1em 0;
+      }
+      .preview {
+        max-width: 300px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="file" />
+    <img class="preview" />
+    <button>点击上传裁剪后的结果</button>
+    <script>
+      const inp = document.querySelector('input');
+      const img = document.querySelector('img');
+      inp.onchange = (e) => {
+        const file = e.target.files[0];
+        // dataurl
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      };
+
+      function uploadResult({ cutWidth, cutHeight, cutX, cutY }) {
+        const cvs = document.createElement('canvas');
+        const ctx = cvs.getContext('2d');
+        cvs.width = 200;
+        cvs.height = 200;
+        ctx.drawImage(
+          img,
+          cutX,
+          cutY,
+          cutWidth,
+          cutHeight,
+          0,
+          0,
+          cvs.width,
+          cvs.height
+        );
+        cvs.toBlob((blob) => {
+          const file = new File([blob], 'cut.png', { type: 'image/png' });
+          // 上传file对象
+        });
+      }
+
+      const btn = document.querySelector('button');
+      btn.onclick = () => {
+        uploadResult({
+          cutWidth: 1000,
+          cutHeight: 1000,
+          cutX: 500,
+          cutY: 800,
+        });
+      };
+    </script>
+  </body>
+</html>

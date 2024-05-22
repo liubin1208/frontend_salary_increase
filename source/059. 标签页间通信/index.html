@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>音乐列表</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="music-list">
+      <div class="music-item">
+        <span class="title">小蝌蚪找妈妈</span>
+        <i data-name="小蝌蚪找妈妈.oggl" class="iconfont i-24gf-play"></i>
+      </div>
+      <div class="music-item">
+        <span class="title">白龙马</span>
+        <i data-name="白龙马.oggl" class="iconfont i-24gf-play"></i>
+      </div>
+      <div class="music-item">
+        <span class="title">生日快乐</span>
+        <i data-name="生日快乐.oggl" class="iconfont i-24gf-play"></i>
+      </div>
+    </div>
+    <script>
+      const btns = document.querySelectorAll('.music-item i');
+      const channel = new BroadcastChannel('music');
+      for (const btn of btns) {
+        btn.onclick = function () {
+          const name = this.dataset.name;
+          const n = +localStorage.getItem('music');
+          if (!isNaN(n) && n > 0) {
+            channel.postMessage(name);
+          } else {
+            window.open('./music.html?name=' + name, '_blank');
+          }
+        };
+      }
+    </script>
+  </body>
+</html>

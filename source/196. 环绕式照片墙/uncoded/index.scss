@@ -1,0 +1,30 @@
+@use 'sass:math';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow: hidden;
+}
+body {
+  background: #000;
+  perspective: 2000px;
+}
+
+.ring {
+  width: 100vw;
+  height: 100vh;
+  img {
+    position: absolute;
+    $imgWidth: 300px;
+    $imgHeight: 400px;
+    width: $imgWidth;
+    height: $imgHeight;
+    left: 50%;
+    top: 50%;
+    margin-left: -$imgWidth / 2;
+    margin-top: -$imgHeight / 2;
+  }
+}

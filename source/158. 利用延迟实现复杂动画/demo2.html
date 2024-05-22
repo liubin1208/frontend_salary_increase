@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>demo2</title>
+    <style>
+      body {
+        background: #000;
+      }
+      .container {
+        --delay: 0;
+        padding-top: 300px;
+      }
+      .eye {
+        position: absolute;
+        top: 0;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 50px;
+        background: #fff;
+        animation: eyeChange 1s var(--delay) linear forwards paused;
+      }
+      @keyframes eyeChange {
+        0% {
+          clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+        }
+        100% {
+          clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="eye"></div>
+      <input type="range" min="0" max="1" step="0.01" />
+    </div>
+    <script>
+      const inp = document.querySelector('input');
+      const container = document.querySelector('.container');
+      function cal() {
+        container.style.setProperty('--delay', `-${inp.value}s`);
+      }
+      inp.oninput = cal;
+      cal();
+    </script>
+  </body>
+</html>

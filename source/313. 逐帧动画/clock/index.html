@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes move {
+        0% {
+          transform: rotate(var(--begin));
+        }
+        100% {
+          transform: rotate(var(--end));
+        }
+      }
+      .clock {
+        margin: 20px auto;
+        background: url(./img/clock.png) no-repeat;
+        width: 512px;
+        height: 512px;
+        position: relative;
+      }
+      .pointer {
+        width: 100%;
+        height: 100%;
+        transform: rotate(180deg);
+      }
+      .hour {
+        transform-origin: 16px 17px;
+        position: absolute;
+        background-repeat: no-repeat;
+        left: 50%;
+        background-image: url(./img/hour.png);
+        width: 32px;
+        height: 148px;
+        margin-left: -16px;
+        top: 239px;
+        animation: move 43200s linear infinite;
+      }
+      .minute {
+        transform-origin: 16px 17px;
+        position: absolute;
+        background-repeat: no-repeat;
+        left: 50%;
+        background-image: url(./img/minute.png);
+        width: 32px;
+        height: 218px;
+        margin-left: -16px;
+        top: 239px;
+        animation: move 3600s linear infinite;
+      }
+      .second {
+        transform-origin: 8px 77px;
+        position: absolute;
+        background-repeat: no-repeat;
+        left: 50%;
+        background-image: url(./img/second.png);
+        width: 16px;
+        height: 278px;
+        margin-left: -8px;
+        top: 179px;
+        animation: move 60s steps(60) infinite forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="pointer">
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="second"></div>
+      </div>
+    </div>
+
+    <script>
+      const $ = document.querySelector.bind(document);
+      const doms = {
+        hour: $('.hour'),
+        minute: $('.minute'),
+        second: $('.second'),
+      };
+      function init() {
+        const date = new Date();
+        date.setHours(0), date.setMinutes(0), date.setSeconds(0);
+        let dis = Math.floor((Date.now() - date) / 1000);
+        const h = dis / 3600,
+          m = (dis = dis - Math.floor(h) * 3600) / 60,
+          s = dis - Math.floor(m) * 60;
+        const hDeg = (360 / 12) * h,
+          mDeg = (360 / 60) * m,
+          sDeg = (360 / 60) * s;
+        doms.hour.style.setProperty('--begin', hDeg + 'deg');
+        doms.hour.style.setProperty('--end', hDeg + 360 + 'deg');
+        doms.minute.style.setProperty('--begin', mDeg + 'deg');
+        doms.minute.style.setProperty('--end', mDeg + 360 + 'deg');
+        doms.second.style.setProperty('--begin', sDeg + 'deg');
+        doms.second.style.setProperty('--end', sDeg + 360 + 'deg');
+      }
+      init();
+    </script>
+  </body>
+</html>

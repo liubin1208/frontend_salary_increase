@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .text-container {
+        position: relative;
+        padding: 10px;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 300px;
+      }
+      .cursor {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 10px;
+        height: 16px;
+        background: #333;
+        animation: blink 0.5s infinite;
+      }
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text-container">
+      <div class="text"></div>
+      <div class="cursor"></div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

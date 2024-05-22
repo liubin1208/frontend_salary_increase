@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <style>
+      .btn {
+        border: none;
+        outline: none;
+        background: #409eff;
+        color: #fff;
+        display: inline-block;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.1s;
+        font-weight: 500;
+        user-select: none;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 4px;
+      }
+      .btn:hover {
+        background: #66b1ff;
+      }
+      .btn:active {
+        background: #3a8ee6;
+      }
+      .btn:disabled {
+        background: #66b1ff80;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btn-container">
+      <button id="btnLogin" class="btn">登录</button>
+      <button id="btnReqProtect" class="btn">请求受保护的接口</button>
+      <button id="btnRefresh" class="btn">刷新token</button>
+    </div>
+    <div class="status"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

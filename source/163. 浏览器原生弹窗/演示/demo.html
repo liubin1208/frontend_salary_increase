@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./demo.css" />
+  </head>
+  <body>
+    <button class="btn" onclick="dialog.show()">弹窗</button>
+    <button class="btn" onclick="dialog.showModal()">模态弹窗</button>
+    <input type="text" class="txt" />
+    <p id="output"></p>
+    <dialog id="dialog">
+      <p>
+        <input placeholder="lalel1" type="text" class="txt" />
+      </p>
+      <p>
+        <input placeholder="lalel2" type="text" class="txt" />
+      </p>
+      <button tabindex="-1" onclick="dialog.close()" class="btn">关闭</button>
+      <button tabindex="-1" onclick="subDialog.showModal()" class="btn">
+        子弹窗
+      </button>
+    </dialog>
+    <dialog id="subDialog">
+      <p>This is a dialog</p>
+      <button onclick="subDialog.close()" class="btn">关闭</button>
+    </dialog>
+
+    <script src="./demo.js"></script>
+  </body>
+</html>

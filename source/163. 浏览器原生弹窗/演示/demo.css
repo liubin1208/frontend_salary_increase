@@ -1,0 +1,58 @@
+body {
+  padding: 2em;
+  background: url(./bg.jpeg) no-repeat center center / cover;
+  height: 100vh;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background: #409eff;
+  color: #fff;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.1s;
+  font-weight: 500;
+  user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.btn:hover {
+  background: #66b1ff;
+}
+.btn:active {
+  background: #3a8ee6;
+}
+.btn:disabled {
+  background: #66b1ff80;
+  cursor: not-allowed;
+}
+
+dialog {
+  border-radius: 10px;
+  border-color: #eee;
+  box-shadow: 2px 2px 5px #33333350;
+  outline: none;
+}
+dialog::backdrop {
+  background: #33333350;
+  backdrop-filter: blur(1px);
+}
+
+.txt {
+  outline: none;
+  flex-grow: 1;
+  font-size: inherit;
+  padding: 1px 11px;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  height: 40px;
+  color: inherit;
+}
+.txt:focus {
+  border-color: #409eff;
+}

@@ -1,0 +1,30 @@
+@use "sass:math";
+body{
+  margin: 0;
+}
+.box {
+  $r: 50;
+  $p: 45;
+  $x: 2 * math.sqrt($r * $r - $p * $p);
+  height: 600px;
+  $bg: radial-gradient(
+    #{$r}px at 50% #{$r + $p}px,
+    red 100%,
+    transparent 101%
+  ) calc(50% - #{$x}px) 
+  0% / #{2 * $x}px 100% repeat-x,
+  radial-gradient(
+    #{$r}px at 50% #{-$p}px, 
+    transparent 100%, 
+    red 101% 
+) 50% 
+#{$r}px / #{2 * $x}px 100% repeat-x;
+  mask: $bg;
+  -webkit-mask: $bg;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+}
+

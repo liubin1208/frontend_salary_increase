@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px;
+        filter: url(#blob);
+      }
+      .ball {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #28c840;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+    <svg style="display: none">
+      <defs>
+        <filter id="blob">
+          <feGaussianBlur
+            in="SourceGraphic"
+            stdDeviation="10"
+            result="blur"
+          ></feGaussianBlur>
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="
+              1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 0 0 20 -10"
+          ></feColorMatrix>
+        </filter>
+      </defs>
+    </svg>
+  </body>
+</html>

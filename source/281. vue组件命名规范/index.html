@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/c/font_3555577_mmbyfinkri.css"
+    />
+    <style>
+      .star-rate {
+        display: flex;
+      }
+      .star-rate .i-star-empty {
+        color: #c6d1de;
+        cursor: pointer;
+        animation: scale 0.3s;
+      }
+      .star-rate .i-star {
+        color: #f7ba2a;
+        transform: scale(0.85);
+        animation: scale 0.3s reverse;
+      }
+      @keyframes scale {
+        from {
+          transform: scale(0.85);
+        }
+        90% {
+          transform: scale(1.05);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <star-rate></star-rate>
+      <star-rate></star-rate>
+      <star-rate></star-rate>
+      <star-rate></star-rate>
+      <star-rate></star-rate>
+      <star-rate></star-rate>
+    </div>
+    <script src="./vue.iife.js"></script>
+    <script>
+      // 定义组件
+      // 组件的配置对象  VueComponent
+      const StarRate = {
+        template: `<div class="star-rate">
+        <i class="iconfont i-star"></i>
+        <i class="iconfont i-star"></i>
+        <i class="iconfont i-star"></i>
+        <i class="iconfont i-star-empty"></i>
+        <i class="iconfont i-star-empty"></i>
+      </div>`,
+      };
+      // 组件注册
+      // 1. 全局注册
+      // Vue.component('star-rate', StarRate);
+      // 2. 局部注册
+
+      new Vue({
+        // 配置对象
+        el: '#app',
+        components: {
+          StarRate,
+        },
+      });
+    </script>
+  </body>
+</html>

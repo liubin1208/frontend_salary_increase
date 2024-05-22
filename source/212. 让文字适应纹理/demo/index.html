@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .txt {
+        outline: none;
+        flex-grow: 1;
+        font-size: inherit;
+        padding: 1px 11px;
+        border: 1px solid #dcdfe6;
+        border-radius: 4px;
+        height: 40px;
+        color: inherit;
+        margin-right: 1em;
+        flex-grow: 0;
+      }
+      .txt:focus {
+        border-color: #409eff;
+      }
+      .container {
+        margin: 30px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" class="txt" />
+      <input type="color" />
+    </div>
+    <svg viewBox="0 0 600 330">
+      <defs>
+        <filter id="conform">
+          <feImage
+            href="bg.jpeg"
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            preserveAspectRatio="none"
+            result="ORIGIN_IMAGE"
+          ></feImage>
+          <feColorMatrix
+            in="ORIGIN_IMAGE"
+            type="saturate"
+            values="0"
+            result="GRAY_IMAGE"
+          ></feColorMatrix>
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="GRAY_IMAGE"
+            scale="15"
+            xChannelSelector="R"
+            yChannelSelector="R"
+            result="TEXTURED_TEXT"
+          ></feDisplacementMap>
+          <feImage
+            href="bg.jpeg"
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            preserveAspectRatio="none"
+            result="BG"
+          ></feImage>
+          <feColorMatrix
+            in="TEXTURED_TEXT"
+            result="OPACITY_TEXT"
+            type="matrix"
+            values="1 0 0 0 0 
+							   0 1 0 0 0 
+							   0 0 1 0 0 
+							   0 0 0 .9 0"
+          ></feColorMatrix>
+          <feBlend
+            in="BG"
+            in2="OPACITY_TEXT"
+            mode="multiply"
+            result="BLENDED_TEXT"
+          ></feBlend>
+        </filter>
+      </defs>
+      <Image
+        href="bg.jpeg"
+        x="0"
+        y="0"
+        width="100%"
+        height="100%"
+        preserveAspectRatio="none"
+      ></Image>
+      <text
+        x="50%"
+        y="50%"
+        font-size="10em"
+        font-weight="bold"
+        text-anchor="middle"
+        alignment-baseline="middle"
+        fill="#000"
+        filter="url(#conform)"
+        id="svgText"
+      >
+        LOGO
+      </text>
+    </svg>
+
+    <script>
+      const txt = document.querySelector('.txt');
+      const color = document.querySelector('input[type=color]');
+      const svgText = document.querySelector('#svgText');
+      txt.addEventListener('input', (e) => {
+        svgText.textContent = e.target.value;
+      });
+      color.addEventListener('input', (e) => {
+        svgText.style.fill = e.target.value;
+      });
+    </script>
+  </body>
+</html>

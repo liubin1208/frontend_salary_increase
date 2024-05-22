@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url('./bg.png') no-repeat center top/cover fixed;
+}
+.docker-container {
+  position: fixed;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.docker {
+  box-sizing: content-box;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  align-items: end;
+}
+.menu-item {
+  border-radius: 5px;
+  width: calc(var(--i, 1) * 30px);
+  height: calc(var(--i, 1) * 30px);
+  margin-bottom: calc(var(--i, 1) * 15px - 15px);
+  background: #b4433d;
+  border: 1px solid #ccc;
+}
+.menu-item:nth-child(3n) {
+  background: #1a862a;
+}
+.menu-item:nth-child(3n + 2) {
+  background: #e8ad2d;
+}
+.gap {
+  height: 100%;
+  width: calc(var(--i, 1) * 10px);
+  height: 30px;
+}
+
+@property --i {
+  syntax: '<number>';
+  initial-value: 1;
+  inherits: false;
+}

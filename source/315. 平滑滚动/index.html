@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 100%;
+      }
+      .btn {
+        border: none;
+        outline: none;
+        background: #409eff;
+        color: #fff;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.1s;
+        font-weight: 500;
+        user-select: none;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 4px;
+        position: fixed;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        left: 1em;
+        bottom: 1em;
+      }
+      .btn:hover {
+        background: #66b1ff;
+      }
+      .btn:active {
+        background: #3a8ee6;
+      }
+      .btn:disabled {
+        background: #66b1ff80;
+        cursor: not-allowed;
+      }
+      /* html {
+        scroll-behavior: smooth;
+      } */
+    </style>
+  </head>
+  <body>
+    <button class="btn">回到顶部</button>
+    <img src="https://picsum.photos/seed/21/800/600" alt="" />
+    <img src="https://picsum.photos/seed/22/800/600" alt="" />
+    <img src="https://picsum.photos/seed/23/800/600" alt="" />
+    <img src="https://picsum.photos/seed/24/800/600" alt="" />
+    <img src="https://picsum.photos/seed/25/800/600" alt="" />
+    <img src="https://picsum.photos/seed/26/800/600" alt="" />
+    <img src="https://picsum.photos/seed/27/800/600" alt="" />
+    <img src="https://picsum.photos/seed/28/800/600" alt="" />
+    <img src="https://picsum.photos/seed/29/800/600" alt="" />
+    <img src="https://picsum.photos/seed/210/800/600" alt="" />
+
+    <script>
+      const btn = document.querySelector('.btn');
+      btn.onclick = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      };
+    </script>
+  </body>
+</html>

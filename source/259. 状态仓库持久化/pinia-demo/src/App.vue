@@ -1,0 +1,62 @@
+<template>
+  <div class="item">
+    <button class="btn" @click="counterStore.count++">
+      increase: {{ counterStore.count }}
+    </button>
+  </div>
+  <div class="item">
+    <input type="text" v-model="textStore.text" class="txt" />
+  </div>
+</template>
+
+<script setup>
+import { useCounterStore, useTextStore } from './store';
+const counterStore = useCounterStore();
+const textStore = useTextStore();
+</script>
+
+<style scoped>
+.item {
+  margin: 20px 0;
+}
+.txt {
+  outline: none;
+  flex-grow: 1;
+  font-size: inherit;
+  padding: 1px 11px;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  height: 40px;
+  color: inherit;
+}
+.txt:focus {
+  border-color: #409eff;
+}
+.btn {
+  border: none;
+  outline: none;
+  background: #409eff;
+  color: #fff;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.1s;
+  font-weight: 500;
+  user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.btn:hover {
+  background: #66b1ff;
+}
+.btn:active {
+  background: #3a8ee6;
+}
+.btn:disabled {
+  background: #66b1ff80;
+  cursor: not-allowed;
+}
+</style>

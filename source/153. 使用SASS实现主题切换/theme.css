@@ -1,0 +1,14 @@
+.item {
+  width: 100px;
+  height: 100px;
+}
+html[data-theme=light] .item {
+  background: #fff;
+  color: #000;
+  border-color: #000;
+}
+html[data-theme=dark] .item {
+  background: #000;
+  color: #fff;
+  border-color: #fff;
+}

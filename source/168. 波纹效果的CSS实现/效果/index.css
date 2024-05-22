@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+}
+
+.box {
+  height: 600px;
+  mask: radial-gradient(50px at 50% 95px, red 100%, transparent 101%) calc(50% - 43.5889894354px) 0%/87.1779788708px 100% repeat-x, radial-gradient(50px at 50% -45px, transparent 100%, red 101%) 50% 50px/87.1779788708px 100% repeat-x;
+  -webkit-mask: radial-gradient(50px at 50% 95px, red 100%, transparent 101%) calc(50% - 43.5889894354px) 0%/87.1779788708px 100% repeat-x, radial-gradient(50px at 50% -45px, transparent 100%, red 101%) 50% 50px/87.1779788708px 100% repeat-x;
+}
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

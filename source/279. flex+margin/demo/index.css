@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.container {
+  display: flex;
+  padding: 10px;
+  width: 80%;
+  background: #ddd;
+}
+
+.item {
+  height: 50px;
+  width: 50px;
+  border: 3px solid #333;
+}
+.item:nth-child(3n + 1) {
+  background: #eb6a5f;
+  border-color: #832219;
+}
+.item:nth-child(3n + 2) {
+  background: #f5bd4f;
+  border-color: #785716;
+}
+.item:nth-child(3n + 3) {
+  background: #61c454;
+  border-color: #206a16;
+}
+
+.container1 {
+  height: 300px;
+}
+.container1 .item {
+  margin: auto;
+}
+
+.container2 .item:nth-child(3) {
+  margin-left: auto;
+}
+
+.container3 .item:nth-child(3) {
+  margin-left: auto;
+}
+
+.container4 .item:nth-child(3) {
+  margin: 0 auto;
+}
+
+.container5 {
+  flex-wrap: wrap;
+}
+.container5 .item {
+  --n: 7;
+  margin: 10px calc((100% - var(--n) * 50px) / var(--n) / 2);
+}

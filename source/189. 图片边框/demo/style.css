@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+}
+
+.bdr-img {
+  color: white;
+  text-align: center;
+  padding: 5rem;
+  margin: 2rem auto;
+  width: 70%;
+  border: 50px solid #fff;
+  border-image: url(./border.svg) 50 round;
+}

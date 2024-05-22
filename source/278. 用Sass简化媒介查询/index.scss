@@ -1,0 +1,76 @@
+$breakpoints: (
+  'phone': (
+    320px,
+    480px,
+  ),
+  'pad': (
+    481px,
+    768px,
+  ),
+  'notebook': (
+    769px,
+    1024px,
+  ),
+  'desktop': (
+    1025px,
+    1200px,
+  ),
+  'tv': 1201px,
+);
+
+@mixin responseTo($breakname) {
+  $bp: map-get($breakpoints, $breakname);
+  @if type-of($bp) == 'list' {
+    @media (min-width: nth($bp, 1)) and (max-width: nth($bp, 2)) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $bp) {
+      @content;
+    }
+  }
+}
+
+.header {
+  width: 100%;
+  @include responseTo('phone') {
+    height: 50px;
+  }
+  @include responseTo('pad') {
+    height: 60px;
+  }
+  @include responseTo('notebook') {
+    height: 80px;
+  }
+  @include responseTo('desktop') {
+    height: 100px;
+  }
+  @include responseTo('tv') {
+    height: 120px;
+  }
+}
+// @media (min-width: 320px) and (max-width: 480px) {
+//   .header {
+//     height: 50px;
+//   }
+// }
+// @media (min-width: 481px) and (max-width: 768px) {
+//   .header {
+//     height: 60px;
+//   }
+// }
+// @media (min-width: 769px) and (max-width: 1024px) {
+//   .header {
+//     height: 80px;
+//   }
+// }
+// @media (min-width: 1025px) and (max-width: 1200px) {
+//   .header {
+//     height: 100px;
+//   }
+// }
+// @media (min-width: 1201px) {
+//   .header {
+//     height: 120px;
+//   }
+// }

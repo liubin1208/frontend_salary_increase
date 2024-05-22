@@ -1,0 +1,828 @@
+html {
+  background: url("./wall4.png"), url("./wall3.png"), url("./wall2.png"), url("./wall1.png");
+  background-attachment: fixed;
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) center top/cover;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+.be::after {
+  content: "be a";
+  font-size: 10vw;
+  color: #fff;
+  text-shadow: 1px 1px 4px #333;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1910px) {
+  .be::after {
+    content: "be Unconventional";
+  }
+}
+@media screen and (max-width: 1900px) {
+  .be::after {
+    content: "be Flabbergasting";
+  }
+}
+@media screen and (max-width: 1890px) {
+  .be::after {
+    content: "be Scintillating";
+  }
+}
+@media screen and (max-width: 1880px) {
+  .be::after {
+    content: "be Extraordinary";
+  }
+}
+@media screen and (max-width: 1870px) {
+  .be::after {
+    content: "be Unforgettable";
+  }
+}
+@media screen and (max-width: 1860px) {
+  .be::after {
+    content: "be Unpredictable";
+  }
+}
+@media screen and (max-width: 1850px) {
+  .be::after {
+    content: "be Dumbfounding";
+  }
+}
+@media screen and (max-width: 1840px) {
+  .be::after {
+    content: "be Electrifying";
+  }
+}
+@media screen and (max-width: 1830px) {
+  .be::after {
+    content: "be Overwhelming";
+  }
+}
+@media screen and (max-width: 1820px) {
+  .be::after {
+    content: "be Incomparable";
+  }
+}
+@media screen and (max-width: 1810px) {
+  .be::after {
+    content: "be Entertaining";
+  }
+}
+@media screen and (max-width: 1800px) {
+  .be::after {
+    content: "be Magnificient";
+  }
+}
+@media screen and (max-width: 1790px) {
+  .be::after {
+    content: "be Confounding";
+  }
+}
+@media screen and (max-width: 1780px) {
+  .be::after {
+    content: "be Resourceful";
+  }
+}
+@media screen and (max-width: 1770px) {
+  .be::after {
+    content: "be Interesting";
+  }
+}
+@media screen and (max-width: 1760px) {
+  .be::after {
+    content: "be Adventurous";
+  }
+}
+@media screen and (max-width: 1750px) {
+  .be::after {
+    content: "be Bewildering";
+  }
+}
+@media screen and (max-width: 1740px) {
+  .be::after {
+    content: "be Astonishing";
+  }
+}
+@media screen and (max-width: 1730px) {
+  .be::after {
+    content: "be Fascinating";
+  }
+}
+@media screen and (max-width: 1720px) {
+  .be::after {
+    content: "be Outstanding";
+  }
+}
+@media screen and (max-width: 1710px) {
+  .be::after {
+    content: "be Influential";
+  }
+}
+@media screen and (max-width: 1700px) {
+  .be::after {
+    content: "be Imaginative";
+  }
+}
+@media screen and (max-width: 1690px) {
+  .be::after {
+    content: "be Nonsensical";
+  }
+}
+@media screen and (max-width: 1680px) {
+  .be::after {
+    content: "be Stimulating";
+  }
+}
+@media screen and (max-width: 1670px) {
+  .be::after {
+    content: "be Exceptional";
+  }
+}
+@media screen and (max-width: 1660px) {
+  .be::after {
+    content: "be Resplendent";
+  }
+}
+@media screen and (max-width: 1650px) {
+  .be::after {
+    content: "be Commanding";
+  }
+}
+@media screen and (max-width: 1640px) {
+  .be::after {
+    content: "be Determined";
+  }
+}
+@media screen and (max-width: 1630px) {
+  .be::after {
+    content: "be Remarkable";
+  }
+}
+@media screen and (max-width: 1620px) {
+  .be::after {
+    content: "be Incredible";
+  }
+}
+@media screen and (max-width: 1610px) {
+  .be::after {
+    content: "be Impressive";
+  }
+}
+@media screen and (max-width: 1600px) {
+  .be::after {
+    content: "be Perplexing";
+  }
+}
+@media screen and (max-width: 1590px) {
+  .be::after {
+    content: "be Passionate";
+  }
+}
+@media screen and (max-width: 1580px) {
+  .be::after {
+    content: "be Formidable";
+  }
+}
+@media screen and (max-width: 1570px) {
+  .be::after {
+    content: "be Stupefying";
+  }
+}
+@media screen and (max-width: 1560px) {
+  .be::after {
+    content: "be Refreshing";
+  }
+}
+@media screen and (max-width: 1550px) {
+  .be::after {
+    content: "be Delightful";
+  }
+}
+@media screen and (max-width: 1540px) {
+  .be::after {
+    content: "be Incredible";
+  }
+}
+@media screen and (max-width: 1530px) {
+  .be::after {
+    content: "be Innovative";
+  }
+}
+@media screen and (max-width: 1520px) {
+  .be::after {
+    content: "be Monumemtal";
+  }
+}
+@media screen and (max-width: 1510px) {
+  .be::after {
+    content: "be Surprising";
+  }
+}
+@media screen and (max-width: 1500px) {
+  .be::after {
+    content: "be Stupendous";
+  }
+}
+@media screen and (max-width: 1490px) {
+  .be::after {
+    content: "be Staggering";
+  }
+}
+@media screen and (max-width: 1480px) {
+  .be::after {
+    content: "be Delectable";
+  }
+}
+@media screen and (max-width: 1470px) {
+  .be::after {
+    content: "be Astounding";
+  }
+}
+@media screen and (max-width: 1460px) {
+  .be::after {
+    content: "be Responsive";
+  }
+}
+@media screen and (max-width: 1450px) {
+  .be::after {
+    content: "be Courageous";
+  }
+}
+@media screen and (max-width: 1440px) {
+  .be::after {
+    content: "be Outlandish";
+  }
+}
+@media screen and (max-width: 1430px) {
+  .be::after {
+    content: "be Marvelous";
+  }
+}
+@media screen and (max-width: 1420px) {
+  .be::after {
+    content: "be Whimsical";
+  }
+}
+@media screen and (max-width: 1410px) {
+  .be::after {
+    content: "be Versatile";
+  }
+}
+@media screen and (max-width: 1400px) {
+  .be::after {
+    content: "be Motivated";
+  }
+}
+@media screen and (max-width: 1390px) {
+  .be::after {
+    content: "be Brilliant";
+  }
+}
+@media screen and (max-width: 1380px) {
+  .be::after {
+    content: "be Eccentric";
+  }
+}
+@media screen and (max-width: 1370px) {
+  .be::after {
+    content: "be Wonderful";
+  }
+}
+@media screen and (max-width: 1360px) {
+  .be::after {
+    content: "be Excellent";
+  }
+}
+@media screen and (max-width: 1350px) {
+  .be::after {
+    content: "be Thrilling";
+  }
+}
+@media screen and (max-width: 1340px) {
+  .be::after {
+    content: "be Inspiring";
+  }
+}
+@media screen and (max-width: 1330px) {
+  .be::after {
+    content: "be Exquisite";
+  }
+}
+@media screen and (max-width: 1320px) {
+  .be::after {
+    content: "be Inventive";
+  }
+}
+@media screen and (max-width: 1310px) {
+  .be::after {
+    content: "be Colourful";
+  }
+}
+@media screen and (max-width: 1300px) {
+  .be::after {
+    content: "be Delicious";
+  }
+}
+@media screen and (max-width: 1290px) {
+  .be::after {
+    content: "be Fantastic";
+  }
+}
+@media screen and (max-width: 1280px) {
+  .be::after {
+    content: "be Audacious";
+  }
+}
+@media screen and (max-width: 1270px) {
+  .be::after {
+    content: "be Dexterous";
+  }
+}
+@media screen and (max-width: 1260px) {
+  .be::after {
+    content: "be Different";
+  }
+}
+@media screen and (max-width: 1250px) {
+  .be::after {
+    content: "be Confident";
+  }
+}
+@media screen and (max-width: 1240px) {
+  .be::after {
+    content: "be Enthused";
+  }
+}
+@media screen and (max-width: 1230px) {
+  .be::after {
+    content: "be Peculiar";
+  }
+}
+@media screen and (max-width: 1220px) {
+  .be::after {
+    content: "be Glorious";
+  }
+}
+@media screen and (max-width: 1210px) {
+  .be::after {
+    content: "be Smashing";
+  }
+}
+@media screen and (max-width: 1200px) {
+  .be::after {
+    content: "be Splendid";
+  }
+}
+@media screen and (max-width: 1190px) {
+  .be::after {
+    content: "be Adaptive";
+  }
+}
+@media screen and (max-width: 1180px) {
+  .be::after {
+    content: "be Daunting";
+  }
+}
+@media screen and (max-width: 1170px) {
+  .be::after {
+    content: "be Imposing";
+  }
+}
+@media screen and (max-width: 1160px) {
+  .be::after {
+    content: "be Striking";
+  }
+}
+@media screen and (max-width: 1150px) {
+  .be::after {
+    content: "be Charming";
+  }
+}
+@media screen and (max-width: 1140px) {
+  .be::after {
+    content: "be Dazzling";
+  }
+}
+@media screen and (max-width: 1130px) {
+  .be::after {
+    content: "be Engaging";
+  }
+}
+@media screen and (max-width: 1120px) {
+  .be::after {
+    content: "be Resolute";
+  }
+}
+@media screen and (max-width: 1110px) {
+  .be::after {
+    content: "be Intrepid";
+  }
+}
+@media screen and (max-width: 1100px) {
+  .be::after {
+    content: "be Dramatic";
+  }
+}
+@media screen and (max-width: 1090px) {
+  .be::after {
+    content: "be Original";
+  }
+}
+@media screen and (max-width: 1080px) {
+  .be::after {
+    content: "be Fearless";
+  }
+}
+@media screen and (max-width: 1070px) {
+  .be::after {
+    content: "be Flexible";
+  }
+}
+@media screen and (max-width: 1060px) {
+  .be::after {
+    content: "be Creative";
+  }
+}
+@media screen and (max-width: 1050px) {
+  .be::after {
+    content: "be Animated";
+  }
+}
+@media screen and (max-width: 1040px) {
+  .be::after {
+    content: "be Puzzling";
+  }
+}
+@media screen and (max-width: 1030px) {
+  .be::after {
+    content: "be Shocking";
+  }
+}
+@media screen and (max-width: 1020px) {
+  .be::after {
+    content: "be Intense";
+  }
+}
+@media screen and (max-width: 1010px) {
+  .be::after {
+    content: "be Elastic";
+  }
+}
+@media screen and (max-width: 1000px) {
+  .be::after {
+    content: "be Pointed";
+  }
+}
+@media screen and (max-width: 990px) {
+  .be::after {
+    content: "be Unusual";
+  }
+}
+@media screen and (max-width: 980px) {
+  .be::after {
+    content: "be Devoted";
+  }
+}
+@media screen and (max-width: 970px) {
+  .be::after {
+    content: "be Amusing";
+  }
+}
+@media screen and (max-width: 960px) {
+  .be::after {
+    content: "be Radiant";
+  }
+}
+@media screen and (max-width: 950px) {
+  .be::after {
+    content: "be Refined";
+  }
+}
+@media screen and (max-width: 940px) {
+  .be::after {
+    content: "be Natural";
+  }
+}
+@media screen and (max-width: 930px) {
+  .be::after {
+    content: "be Dynamic";
+  }
+}
+@media screen and (max-width: 920px) {
+  .be::after {
+    content: "be Radical";
+  }
+}
+@media screen and (max-width: 910px) {
+  .be::after {
+    content: "be Bizarre";
+  }
+}
+@media screen and (max-width: 900px) {
+  .be::after {
+    content: "be Curious";
+  }
+}
+@media screen and (max-width: 890px) {
+  .be::after {
+    content: "be Amazing";
+  }
+}
+@media screen and (max-width: 880px) {
+  .be::after {
+    content: "be Lively";
+  }
+}
+@media screen and (max-width: 870px) {
+  .be::after {
+    content: "be Modest";
+  }
+}
+@media screen and (max-width: 860px) {
+  .be::after {
+    content: "be Mighty";
+  }
+}
+@media screen and (max-width: 850px) {
+  .be::after {
+    content: "be August";
+  }
+}
+@media screen and (max-width: 840px) {
+  .be::after {
+    content: "be Unique";
+  }
+}
+@media screen and (max-width: 830px) {
+  .be::after {
+    content: "be Absurd";
+  }
+}
+@media screen and (max-width: 820px) {
+  .be::after {
+    content: "be Brazen";
+  }
+}
+@media screen and (max-width: 810px) {
+  .be::after {
+    content: "be Crafty";
+  }
+}
+@media screen and (max-width: 800px) {
+  .be::after {
+    content: "be Astute";
+  }
+}
+@media screen and (max-width: 790px) {
+  .be::after {
+    content: "be Shrewd";
+  }
+}
+@media screen and (max-width: 780px) {
+  .be::after {
+    content: "be Daring";
+  }
+}
+@media screen and (max-width: 770px) {
+  .be::after {
+    content: "be Lovely";
+  }
+}
+@media screen and (max-width: 760px) {
+  .be::after {
+    content: "be Nimble";
+  }
+}
+@media screen and (max-width: 750px) {
+  .be::after {
+    content: "be Classy";
+  }
+}
+@media screen and (max-width: 740px) {
+  .be::after {
+    content: "be Humble";
+  }
+}
+@media screen and (max-width: 730px) {
+  .be::after {
+    content: "be Limber";
+  }
+}
+@media screen and (max-width: 720px) {
+  .be::after {
+    content: "be Superb";
+  }
+}
+@media screen and (max-width: 710px) {
+  .be::after {
+    content: "be Super";
+  }
+}
+@media screen and (max-width: 700px) {
+  .be::after {
+    content: "be Ready";
+  }
+}
+@media screen and (max-width: 690px) {
+  .be::after {
+    content: "be Crazy";
+  }
+}
+@media screen and (max-width: 680px) {
+  .be::after {
+    content: "be Proud";
+  }
+}
+@media screen and (max-width: 670px) {
+  .be::after {
+    content: "be First";
+  }
+}
+@media screen and (max-width: 660px) {
+  .be::after {
+    content: "be Light";
+  }
+}
+@media screen and (max-width: 650px) {
+  .be::after {
+    content: "be Alert";
+  }
+}
+@media screen and (max-width: 640px) {
+  .be::after {
+    content: "be Lithe";
+  }
+}
+@media screen and (max-width: 630px) {
+  .be::after {
+    content: "be Fiery";
+  }
+}
+@media screen and (max-width: 620px) {
+  .be::after {
+    content: "be Eager";
+  }
+}
+@media screen and (max-width: 610px) {
+  .be::after {
+    content: "be Quick";
+  }
+}
+@media screen and (max-width: 600px) {
+  .be::after {
+    content: "be Risky";
+  }
+}
+@media screen and (max-width: 590px) {
+  .be::after {
+    content: "be Adept";
+  }
+}
+@media screen and (max-width: 580px) {
+  .be::after {
+    content: "be Sharp";
+  }
+}
+@media screen and (max-width: 570px) {
+  .be::after {
+    content: "be Smart";
+  }
+}
+@media screen and (max-width: 560px) {
+  .be::after {
+    content: "be Brisk";
+  }
+}
+@media screen and (max-width: 550px) {
+  .be::after {
+    content: "be Fresh";
+  }
+}
+@media screen and (max-width: 540px) {
+  .be::after {
+    content: "be Swift";
+  }
+}
+@media screen and (max-width: 530px) {
+  .be::after {
+    content: "be Novel";
+  }
+}
+@media screen and (max-width: 520px) {
+  .be::after {
+    content: "be Giant";
+  }
+}
+@media screen and (max-width: 510px) {
+  .be::after {
+    content: "be Funky";
+  }
+}
+@media screen and (max-width: 500px) {
+  .be::after {
+    content: "be Weird";
+  }
+}
+@media screen and (max-width: 490px) {
+  .be::after {
+    content: "be Grand";
+  }
+}
+@media screen and (max-width: 480px) {
+  .be::after {
+    content: "be Alive";
+  }
+}
+@media screen and (max-width: 470px) {
+  .be::after {
+    content: "be Happy";
+  }
+}
+@media screen and (max-width: 460px) {
+  .be::after {
+    content: "be Keen";
+  }
+}
+@media screen and (max-width: 450px) {
+  .be::after {
+    content: "be Bold";
+  }
+}
+@media screen and (max-width: 440px) {
+  .be::after {
+    content: "be Wild";
+  }
+}
+@media screen and (max-width: 430px) {
+  .be::after {
+    content: "be Spry";
+  }
+}
+@media screen and (max-width: 420px) {
+  .be::after {
+    content: "be Zany";
+  }
+}
+@media screen and (max-width: 410px) {
+  .be::after {
+    content: "be Nice";
+  }
+}
+@media screen and (max-width: 400px) {
+  .be::after {
+    content: "be Loud";
+  }
+}
+@media screen and (max-width: 390px) {
+  .be::after {
+    content: "be Lean";
+  }
+}
+@media screen and (max-width: 380px) {
+  .be::after {
+    content: "be Fine";
+  }
+}
+@media screen and (max-width: 370px) {
+  .be::after {
+    content: "be Busy";
+  }
+}
+@media screen and (max-width: 360px) {
+  .be::after {
+    content: "be Cool";
+  }
+}
+@media screen and (max-width: 350px) {
+  .be::after {
+    content: "be Rare";
+  }
+}
+@media screen and (max-width: 340px) {
+  .be::after {
+    content: "be Apt";
+  }
+}
+@media screen and (max-width: 330px) {
+  .be::after {
+    content: "be Fun";
+  }
+}
+@media screen and (max-width: 320px) {
+  .be::after {
+    content: "be Hot";
+  }
+}
+@media screen and (max-width: 310px) {
+  .be::after {
+    content: "be Big";
+  }
+}

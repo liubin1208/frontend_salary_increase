@@ -1,0 +1,68 @@
+.ball {
+  position: fixed;
+  top: 250px;
+  width: 50px;
+  height: 50px;
+  background: #eb685d;
+  border-radius: 50%;
+  left: 30%;
+  animation: move 4s infinite linear;
+}
+
+@keyframes move {
+  25% {
+    left: 70%;
+    top: 250px;
+  }
+  50% {
+    left: 70%;
+    top: 350px;
+  }
+  75% {
+    left: 30%;
+    top: 350px;
+  }
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  padding-top: 30px;
+}
+.head label {
+  height: 30px;
+  line-height: 30px;
+}
+#waiting {
+  color: #ed6a5f;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background: #409eff;
+  color: #fff;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.1s;
+  font-weight: 500;
+  user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.btn:hover {
+  background: #66b1ff;
+}
+.btn:active {
+  background: #3a8ee6;
+}
+.btn:disabled {
+  background: #66b1ff80;
+  cursor: not-allowed;
+}

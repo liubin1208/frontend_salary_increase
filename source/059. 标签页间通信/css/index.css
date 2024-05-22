@@ -1,0 +1,27 @@
+@import url(../font/iconfont.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.music-list {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+.music-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  background: rgba(0, 169, 255, 0.2);
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+.music-item .iconfont:hover {
+  color: #00a9ff;
+}

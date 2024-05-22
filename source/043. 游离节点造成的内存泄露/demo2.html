@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        border: none;
+        outline: none;
+        background: #409eff;
+        color: #fff;
+        display: inline-block;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.1s;
+        font-weight: 500;
+        user-select: none;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 4px;
+      }
+      .btn:hover {
+        background: #66b1ff;
+      }
+      .btn:active {
+        background: #3a8ee6;
+      }
+      .btn:disabled {
+        background: #66b1ff80;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button class="btn" onclick="createInputs()">
+        依次创建10个聚焦的文本框
+      </button>
+    </div>
+
+    <script>
+      function createInput() {
+        return new Promise((r) => {
+          const inp = document.createElement('input');
+          document.body.appendChild(inp);
+          inp.focus();
+          setTimeout(() => {
+            inp.remove();
+            r();
+          }, 500);
+        });
+      }
+
+      function delay(duration = 1000) {
+        return new Promise((resolve) => {
+          setTimeout(resolve, duration);
+        });
+      }
+
+      async function createInputs() {
+        for (let i = 0; i < 10; i++) {
+          await createInput();
+          await delay(100);
+        }
+      }
+    </script>
+  </body>
+</html>

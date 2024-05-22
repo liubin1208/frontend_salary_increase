@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #cebca6;
+}
+
+.cup {
+  width: 160px;
+  height: 162px;
+  margin: 3em auto;
+  position: relative;
+}
+.cup::before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  left: 0;
+  top: -10px;
+  background: rgba(247, 247, 247, 0.5);
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.cup-body {
+  height: 100%;
+  background: rgba(247, 247, 247, 0.9);
+  clip-path: path(
+    'm 0 0 q 4.59 145.8 34.425 155.52 c 29.835 8.1 68.85 8.1 96.39 0 q 29.835 -9.72 29.835 -155.52 C 143 11 16 13 0 0 Z'
+  );
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.layer {
+  height: 40px;
+  width: 100%;
+  border-radius: 80px/10px;
+  position: relative;
+}
+.layer::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background: inherit;
+  border-radius: 50%;
+}
+.layer:nth-child(n + 2) {
+  margin-bottom: -20px;
+}
+
+.espresso {
+  background: rgba(75, 49, 31, 0.8);
+}
+.whiskey {
+  background: rgba(207, 129, 39, 0.8);
+}

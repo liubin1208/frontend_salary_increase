@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #010101;
+}
+
+.container {
+  width: 80%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+  max-width: 600px;
+}
+
+.item {
+  width: 100%;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item.playing::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  backdrop-filter: blur(5px);
+}
+.item.playing::after {
+  content: '播放中';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.indicator {
+  position: fixed;
+  bottom: 4vw;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 5px;
+  zoom: 1.5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  user-select: none;
+  display: none;
+}

@@ -1,0 +1,10 @@
+POST /upload/large/fileinfo HTTP/1.1
+Host: localhost:9527
+Content-Type: application/json
+
+{
+  "hash": "abcd",
+  "name": "1.txt",
+  "type": "text/plain",
+  "chunkLength": 2
+}

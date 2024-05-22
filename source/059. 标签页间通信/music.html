@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>音乐播放</title>
+    <style>
+      audio {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <audio controls></audio>
+    <script>
+      function play(name) {
+        const audio = document.querySelector('audio');
+        audio.src = './music/' + name;
+        audio.play();
+      }
+
+      const params = new URLSearchParams(location.search);
+      const name = params.get('name');
+      if (name) {
+        play(name);
+      }
+
+      const channel = new BroadcastChannel('music');
+
+      let n = +localStorage.getItem('music');
+      if (isNaN(n)) {
+        n = 0;
+      }
+      n++;
+      localStorage.setItem('music', n);
+
+      window.addEventListener('unload', () => {
+        let n = +localStorage.getItem('music');
+        if (isNaN(n)) {
+          n = 1;
+        }
+        n--;
+        localStorage.setItem('music', n);
+      });
+
+      channel.addEventListener('message', (e) => {
+        play(e.data);
+      });
+    </script>
+  </body>
+</html>

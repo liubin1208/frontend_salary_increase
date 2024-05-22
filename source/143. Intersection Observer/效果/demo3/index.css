@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+
+video {
+  display: block;
+  width: 100%;
+}
+
+body {
+  padding-top: 50px;
+  padding-bottom: 1000px;
+}

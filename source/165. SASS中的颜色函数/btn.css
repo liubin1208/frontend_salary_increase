@@ -1,0 +1,23 @@
+.btn {
+  border: none;
+  outline: none;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.1s;
+  font-weight: 500;
+  user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+body {
+  display: flex;
+  justify-content: space-around;
+}

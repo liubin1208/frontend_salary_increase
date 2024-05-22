@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+body {
+  background: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-size: 80px;
+  padding-top: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.overlap {
+  font-family: 'Luckiest Guy';
+  letter-spacing: -10px;
+  /* display: flex;
+  transform-style: preserve-3d;
+  flex-wrap: wrap;
+  justify-content: center; */
+}
+.overlap span {
+  text-shadow: 10px 0 10px #000;
+  position: relative;
+  z-index: var(--i);
+  /* transform: perspective(500px) rotateY(-1deg); */
+}

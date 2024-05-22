@@ -1,0 +1,59 @@
+html {
+  background: url('./wall4.png'), url('./wall3.png'), url('./wall2.png'),
+    url('./wall1.png');
+  background-attachment: fixed;
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%)
+    center top/cover;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+$words: 'Unconventional', 'Flabbergasting', 'Scintillating', 'Extraordinary',
+  'Unforgettable', 'Unpredictable', 'Dumbfounding', 'Electrifying',
+  'Overwhelming', 'Incomparable', 'Entertaining', 'Magnificient', 'Confounding',
+  'Resourceful', 'Interesting', 'Adventurous', 'Bewildering', 'Astonishing',
+  'Fascinating', 'Outstanding', 'Influential', 'Imaginative', 'Nonsensical',
+  'Stimulating', 'Exceptional', 'Resplendent', 'Commanding', 'Determined',
+  'Remarkable', 'Incredible', 'Impressive', 'Perplexing', 'Passionate',
+  'Formidable', 'Stupefying', 'Refreshing', 'Delightful', 'Incredible',
+  'Innovative', 'Monumemtal', 'Surprising', 'Stupendous', 'Staggering',
+  'Delectable', 'Astounding', 'Responsive', 'Courageous', 'Outlandish',
+  'Marvelous', 'Whimsical', 'Versatile', 'Motivated', 'Brilliant', 'Eccentric',
+  'Wonderful', 'Excellent', 'Thrilling', 'Inspiring', 'Exquisite', 'Inventive',
+  'Colourful', 'Delicious', 'Fantastic', 'Audacious', 'Dexterous', 'Different',
+  'Confident', 'Enthused', 'Peculiar', 'Glorious', 'Smashing', 'Splendid',
+  'Adaptive', 'Daunting', 'Imposing', 'Striking', 'Charming', 'Dazzling',
+  'Engaging', 'Resolute', 'Intrepid', 'Dramatic', 'Original', 'Fearless',
+  'Flexible', 'Creative', 'Animated', 'Puzzling', 'Shocking', 'Intense',
+  'Elastic', 'Pointed', 'Unusual', 'Devoted', 'Amusing', 'Radiant', 'Refined',
+  'Natural', 'Dynamic', 'Radical', 'Bizarre', 'Curious', 'Amazing', 'Lively',
+  'Modest', 'Mighty', 'August', 'Unique', 'Absurd', 'Brazen', 'Crafty', 'Astute',
+  'Shrewd', 'Daring', 'Lovely', 'Nimble', 'Classy', 'Humble', 'Limber', 'Superb',
+  'Super', 'Ready', 'Crazy', 'Proud', 'First', 'Light', 'Alert', 'Lithe',
+  'Fiery', 'Eager', 'Quick', 'Risky', 'Adept', 'Sharp', 'Smart', 'Brisk',
+  'Fresh', 'Swift', 'Novel', 'Giant', 'Funky', 'Weird', 'Grand', 'Alive',
+  'Happy', 'Keen', 'Bold', 'Wild', 'Spry', 'Zany', 'Nice', 'Loud', 'Lean',
+  'Fine', 'Busy', 'Cool', 'Rare', 'Apt', 'Fun', 'Hot', 'Big';
+
+$max: 1910px;
+.be::after {
+  content: 'be a';
+  font-size: 10vw;
+  color: #fff;
+  text-shadow: 1px 1px 4px #333;
+  text-transform: uppercase;
+  @each $word in $words {
+    @media screen and (max-width: $max) {
+      content: 'be #{$word}';
+    }
+    $max: $max - 10px;
+  }
+}

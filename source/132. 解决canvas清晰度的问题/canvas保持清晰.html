@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        /* 样式尺寸 */
+        width: 400px;
+        height: 400px;
+        background: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas></canvas>
+
+    <script>
+      const cvs = document.querySelector('canvas');
+      const ctx = cvs.getContext('2d');
+
+      function draw() {
+        cvs.width = 400 * devicePixelRatio;
+        cvs.height = 400 * devicePixelRatio;
+        ctx.clearRect(0, 0, cvs.width, cvs.height);
+        // 画圆
+        ctx.beginPath();
+        const r = 80 * devicePixelRatio;
+        ctx.arc(cvs.width / 2, cvs.height / 2, r, 0, 2 * Math.PI);
+        ctx.strokeStyle = '#fff';
+        ctx.lineWidth = 10 * devicePixelRatio;
+        ctx.stroke();
+      }
+      draw();
+      window.addEventListener('resize', draw);
+    </script>
+  </body>
+</html>

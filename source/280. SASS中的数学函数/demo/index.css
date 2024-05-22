@@ -1,0 +1,36 @@
+.menu-item {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.board:hover .menu-item:nth-child(1) {
+  transform: translate(0px, -120px);
+  opacity: 1;
+}
+
+.board:hover .menu-item:nth-child(2) {
+  transform: translate(103.9230484541px, -60px);
+  opacity: 1;
+}
+
+.board:hover .menu-item:nth-child(3) {
+  transform: translate(103.9230484541px, 60px);
+  opacity: 1;
+}
+
+.board:hover .menu-item:nth-child(4) {
+  transform: translate(0px, 120px);
+  opacity: 1;
+}
+
+.board:hover .menu-item:nth-child(5) {
+  transform: translate(-103.9230484541px, 60px);
+  opacity: 1;
+}
+
+.board:hover .menu-item:nth-child(6) {
+  transform: translate(-103.9230484541px, -60px);
+  opacity: 1;
+}
+
+/*# sourceMappingURL=index.css.map */

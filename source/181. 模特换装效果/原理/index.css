@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 300px;
+  height: 500px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.source {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.skirt {
+  position: absolute;
+  inset: 0;
+  /* background: url(./imgs/woman_skirt.png) 50% 50% / cover; */
+  background: #f40;
+  --mask: url(./imgs/woman_skirt.png) 50% 50% / cover;
+  mask: var(--mask);
+  -webkit-mask: var(--mask);
+  mix-blend-mode: multiply;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>demo4</title>
+    <style>
+      .editor {
+        outline: none;
+        flex-grow: 1;
+        font-size: inherit;
+        padding: 1px 11px;
+        border: 1px solid #dcdfe6;
+        border-radius: 4px;
+        min-height: 40px;
+        color: inherit;
+      }
+      .editor:focus {
+        border-color: #409eff;
+      }
+      .editor img {
+        max-height: 50vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="editor" contenteditable></div>
+
+    <script>
+      const editor = document.querySelector('.editor');
+      document.addEventListener('paste', (e) => {
+        if (e.clipboardData.files.length > 0) {
+          e.preventDefault();
+          const file = e.clipboardData.files[0];
+
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const img = document.createElement('img');
+            img.src = e.target.result;
+            editor.appendChild(img);
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+    </script>
+  </body>
+</html>
