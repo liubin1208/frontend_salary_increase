@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <p>愚公世代能移山</p>
+    <p>蚍蜉成群可撼树</p>
+    <script>
+      const ps = document.querySelectorAll('p');
+      for (const p of ps) {
+        p.dataset.text = p.textContent;
+      }
+    </script>
+  </body>
+</html>

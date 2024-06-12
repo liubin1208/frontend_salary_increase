@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+}
+@mixin text-stroke($color: #fff, $width: 1px) {
+  text-shadow: 0 -#{$width} #{$color}, #{$width} 0 #{$color},
+    0 #{$width} #{$color}, -#{$width} 0 #{$color},
+    -#{$width} -#{$width} #{$color}, #{$width} #{$width} #{$color},
+    #{$width} -#{$width} #{$color}, -#{$width} #{$width} #{$color};
+}
+p {
+  font-size: 5em;
+  font-weight: bold;
+  font-family: '手札体-简';
+  text-shadow: 0 -2px #fff, 2px 0 #fff, 0 2px #fff, -2px 0 #fff, -2px -2px #fff,
+    2px 2px #fff, 2px -2px #fff, -2px 2px #fff;
+}

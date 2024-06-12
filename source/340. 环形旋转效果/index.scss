@@ -1,0 +1,52 @@
+$size: 300px;
+$imgSize: 80px;
+.container {
+  width: $size;
+  height: $size;
+  outline: 1px solid #000;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  border-radius: 50%;
+  animation: rotate linear infinite 20s;
+  .item {
+    width: $imgSize;
+    height: $imgSize;
+    position: absolute;
+    margin-top: -40px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+$n: 5;
+$pDeg: 360deg / $n;
+.item {
+  transform-origin: center $size / 2 + $imgSize / 2;
+  @for $i from 1 through $n {
+    &:nth-child(#{$i}) {
+      $deg: $pDeg * ($i - 1);
+      transform: rotate($deg);
+      img {
+        --initDeg: #{$deg};
+        transform: rotate(-$deg);
+        animation: rotation 20s linear infinite reverse;
+      }
+    }
+  }
+}
+
+.container {
+  animation: rotation 20s linear infinite;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(calc(360deg - var(--initDeg, 0deg)));
+  }
+}
